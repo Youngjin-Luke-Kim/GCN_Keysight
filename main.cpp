@@ -27,7 +27,10 @@ struct GCNImpl : torch::nn::Module {
         heads.insert(name, register_module("Head_" + name, torch::nn::Linear(hdim, out_dim))); 
     }
     
-    void remove_head(std::string name) { heads.erase(name); } // remove head
+    void remove_head(std::string name) {  
+        unregister_module("Head_" + name); 
+        heads.erase(name); 
+    } // remove head
 
     std::map<std::string, torch::Tensor> forward(torch::Tensor A, torch::Tensor X, const std::vector<std::string>& active_heads) {
         auto H = back_bone(A, X);
