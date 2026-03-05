@@ -36,7 +36,18 @@ struct GCNImpl : torch::nn::Module {
         return outputs;
     }
 
+    void add_input_group(const std::string& name, int64_t input_dim) {
+        adapters.insert(name, register_module("Adapter_" + name, torch::nn::Linear(input_dim, fdim)));
+    }
 
+    std::map<std::string, torch::Tensor> forward_groups (torch::Tensor A, const std::map<std::string, torch::Tensor>& inputs, const std::vector<std::string>& active) {
+
+        auto N = inputs.begin()->second.size(0);
+        auto X = torch::zeros({N, fdim});
+        for (auto& [name, feat] : inputs){ X += adapters[name](feat);}
+        X /= (double)inputs.size();
+        return forward(A, X, active);
+    }
 };
 TORCH_MODULE(GCN);
 
@@ -82,7 +93,7 @@ int main() {
     auto A_tilde = A + torch::eye(N);
     auto D = A_tilde.sum(1).pow(-0.5).diag(); // D^-1/2
     auto A_hat = D.mm(A_tilde).mm(D);
-    auto X = torch::rand({N, F});
+    auto X = torch::randn({N, F});
     auto y = torch::argmax(X.slice(1,0,3) + noise, 1);
     //Check
     std::cout << "N is" << N << " and edges are " << (int)(A.sum().item<float>() / 2) << std::endl;
@@ -93,13 +104,13 @@ int main() {
     std::cout << "H2 Shape: " << PartB.sizes() << std::endl;
 
     //Dynamic head
-    std::cout << "Before adding classifier head 1:" << std::endl;
+    std::cout << "Before adding cls head:" << std::endl;
     show_params(gcn);
-    gcn -> add_head("Classifier", 3);
-    std::cout << "After adding classifier head 1:" << std::endl;
+    gcn -> add_head("cls", 3);
+    std::cout << "After adding cls head:" << std::endl;
     show_params(gcn);
-    gcn -> add_head("Classifier2", 2);
-    std::cout << "After adding classifier head 2:" << std::endl;
+    gcn -> add_head("cls2", 2);
+    std::cout << "After adding cls2 head:" << std::endl;
     show_params(gcn);
 
     // Training
@@ -127,6 +138,24 @@ int main() {
 
     auto outputs_for_both_heads = gcn_final_loaded -> forward(A_hat, X, {"cls", "cls2"});
     std::cout << "Outputs for both heads: " << outputs_for_both_heads["cls"].sizes() << " " << outputs_for_both_heads["cls2"].sizes() << std::endl;
+
+    //stretch gcn declar.
+    GCN stretch_gcn(F, H);
+    stretch_gcn -> add_head("cls", 3);
+    stretch_gcn -> add_input_group("feat_dim_A", 4);
+    stretch_gcn -> add_input_group("feat_dim_B", 5);
+
+    //fake data gen
+    auto feat_dim_A = torch::randn({N, 4});
+    auto feat_dim_B = torch::randn({N, 5});
+    std::map<std::string, torch::Tensor> inputs;
+    inputs.insert({"feat_dim_A", feat_dim_A});
+    inputs.insert({"feat_dim_B", feat_dim_B});
+    auto outputs = stretch_gcn -> forward_groups(A_hat, inputs, {"cls"});
+    std::cout << "Outputs: " << outputs["cls"].sizes() << std::endl;
+    
+
+    
 }
 
 

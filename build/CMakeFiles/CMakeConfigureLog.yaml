@@ -1256,3 +1256,88 @@ events:
         12.0 
       exitCode: 0
 ...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:108 (try_run)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    directories:
+      source: "/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2;/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d26e6/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_d26e6.dir/build.make CMakeFiles/cmTC_d26e6.dir/build
+        gmake[1]: Entering directory '/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp'
+        Building CXX object CMakeFiles/cmTC_d26e6.dir/detect_cuda_version.cc.o
+        /usr/bin/c++  -I/usr/local/cuda/include -std=gnu++17 -o CMakeFiles/cmTC_d26e6.dir/detect_cuda_version.cc.o -c /mnt/d/sccad/2026_spring/02_Interview/Homework/build/detect_cuda_version.cc
+        Linking CXX executable cmTC_d26e6
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d26e6.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_d26e6.dir/detect_cuda_version.cc.o -o cmTC_d26e6  -Wl,-rpath,/usr/local/cuda/lib64 /usr/local/cuda/lib64/libcudart.so 
+        gmake[1]: Leaving directory '/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.6
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:128 (try_run)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/Modules_CUDA_fix/upstream/FindCUDA/select_compute_arch.cmake:188 (CUDA_DETECT_INSTALLED_GPUS)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/public/utils.cmake:331 (cuda_select_nvcc_arch_flags)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/public/cuda.cmake:329 (torch_cuda_get_nvcc_gencode_flag)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/Caffe2Config.cmake:86 (include)"
+      - "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Torch/TorchConfig.cmake:68 (find_package)"
+      - "CMakeLists.txt:7 (find_package)"
+    directories:
+      source: "/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp"
+      binary: "/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_CUDA_ARCHITECTURES: "52"
+      CMAKE_CUDA_FLAGS: ""
+      CMAKE_CUDA_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2;/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/public/../Modules_CUDA_fix"
+    buildResult:
+      variable: "compile_result"
+      cached: true
+      stdout: |
+        Change Dir: '/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_81d52/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_81d52.dir/build.make CMakeFiles/cmTC_81d52.dir/build
+        gmake[1]: Entering directory '/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp'
+        Building CUDA object CMakeFiles/cmTC_81d52.dir/detect_cuda_compute_capabilities.cu.o
+        /usr/local/cuda/bin/nvcc -forward-unknown-to-host-compiler   -std=c++17 "--generate-code=arch=compute_52,code=[compute_52,sm_52]" -MD -MT CMakeFiles/cmTC_81d52.dir/detect_cuda_compute_capabilities.cu.o -MF CMakeFiles/cmTC_81d52.dir/detect_cuda_compute_capabilities.cu.o.d -x cu -c /mnt/d/sccad/2026_spring/02_Interview/Homework/build/detect_cuda_compute_capabilities.cu -o CMakeFiles/cmTC_81d52.dir/detect_cuda_compute_capabilities.cu.o
+        Linking CUDA executable cmTC_81d52
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_81d52.dir/link.txt --verbose=1
+        /usr/bin/g++ @CMakeFiles/cmTC_81d52.dir/objects1.rsp -o cmTC_81d52 @CMakeFiles/cmTC_81d52.dir/linkLibs.rsp -L"/usr/local/cuda/targets/x86_64-linux/lib/stubs" -L"/usr/local/cuda/targets/x86_64-linux/lib"
+        gmake[1]: Leaving directory '/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/CMakeTmp'
+        
+      exitCode: 0
+    runResult:
+      variable: "run_result"
+      cached: true
+      stdout: |
+        12.0 
+      exitCode: 0
+...
