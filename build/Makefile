@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/d/sccad/2026_spring/02_Interview/Homework
+CMAKE_SOURCE_DIR = /mnt/d/sccad/2026_spring/02_Interview/homework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/d/sccad/2026_spring/02_Interview/Homework/build
+CMAKE_BINARY_DIR = /mnt/d/sccad/2026_spring/02_Interview/homework/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles /mnt/d/sccad/2026_spring/02_Interview/Homework/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/sccad/2026_spring/02_Interview/homework/build/CMakeFiles /mnt/d/sccad/2026_spring/02_Interview/homework/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/d/sccad/2026_spring/02_Interview/homework/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,6 +129,19 @@ gcn/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gcn.dir/build.make CMakeFiles/gcn.dir/build
 .PHONY : gcn/fast
 
+#=============================================================================
+# Target rules for targets named grafenne
+
+# Build rule for target.
+grafenne: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grafenne
+.PHONY : grafenne
+
+# fast build rule for target.
+grafenne/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafenne.dir/build.make CMakeFiles/grafenne.dir/build
+.PHONY : grafenne/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +166,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gcn.dir/build.make CMakeFiles/gcn.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+main_grafenne.o: main_grafenne.cpp.o
+.PHONY : main_grafenne.o
+
+# target to build an object file
+main_grafenne.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafenne.dir/build.make CMakeFiles/grafenne.dir/main_grafenne.cpp.o
+.PHONY : main_grafenne.cpp.o
+
+main_grafenne.i: main_grafenne.cpp.i
+.PHONY : main_grafenne.i
+
+# target to preprocess a source file
+main_grafenne.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafenne.dir/build.make CMakeFiles/grafenne.dir/main_grafenne.cpp.i
+.PHONY : main_grafenne.cpp.i
+
+main_grafenne.s: main_grafenne.cpp.s
+.PHONY : main_grafenne.s
+
+# target to generate assembly for a file
+main_grafenne.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grafenne.dir/build.make CMakeFiles/grafenne.dir/main_grafenne.cpp.s
+.PHONY : main_grafenne.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +199,13 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... gcn"
+	@echo "... grafenne"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... main_grafenne.o"
+	@echo "... main_grafenne.i"
+	@echo "... main_grafenne.s"
 .PHONY : help
 
 

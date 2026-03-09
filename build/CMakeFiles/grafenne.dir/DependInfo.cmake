@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/mnt/d/sccad/2026_spring/02_Interview/homework/main.cpp" "CMakeFiles/gcn.dir/main.cpp.o" "gcc" "CMakeFiles/gcn.dir/main.cpp.o.d"
+  "/mnt/d/sccad/2026_spring/02_Interview/homework/main_grafenne.cpp" "CMakeFiles/grafenne.dir/main_grafenne.cpp.o" "gcc" "CMakeFiles/grafenne.dir/main_grafenne.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

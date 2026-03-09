@@ -1,3 +1,4 @@
-/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/gcn.dir
-/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/edit_cache.dir
-/mnt/d/sccad/2026_spring/02_Interview/Homework/build/CMakeFiles/rebuild_cache.dir
+/mnt/d/sccad/2026_spring/02_Interview/homework/build/CMakeFiles/gcn.dir
+/mnt/d/sccad/2026_spring/02_Interview/homework/build/CMakeFiles/grafenne.dir
+/mnt/d/sccad/2026_spring/02_Interview/homework/build/CMakeFiles/edit_cache.dir
+/mnt/d/sccad/2026_spring/02_Interview/homework/build/CMakeFiles/rebuild_cache.dir

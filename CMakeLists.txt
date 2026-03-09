@@ -7,3 +7,6 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Torch REQUIRED)
 add_executable(gcn main.cpp)
 target_link_libraries(gcn "${TORCH_LIBRARIES}")
+
+add_executable(grafenne main_grafenne.cpp)
+target_link_libraries(grafenne "${TORCH_LIBRARIES}")

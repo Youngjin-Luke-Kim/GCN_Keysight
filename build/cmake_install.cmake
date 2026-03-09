@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/d/sccad/2026_spring/02_Interview/Homework
+# Install script for directory: /mnt/d/sccad/2026_spring/02_Interview/homework
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/mnt/d/sccad/2026_spring/02_Interview/Homework/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/mnt/d/sccad/2026_spring/02_Interview/homework/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

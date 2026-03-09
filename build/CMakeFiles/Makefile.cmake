@@ -20,7 +20,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Caffe2/public/utils.cmake"
   "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Torch/TorchConfig.cmake"
   "/mnt/d/sccad/2026_spring/01_publications/iccad-26/openeye-1.0/.venv/lib/python3.12/site-packages/torch/share/cmake/Torch/TorchConfigVersion.cmake"
-  "/mnt/d/sccad/2026_spring/02_Interview/Homework/CMakeLists.txt"
+  "/mnt/d/sccad/2026_spring/02_Interview/homework/CMakeLists.txt"
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCUDACompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
@@ -81,4 +81,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/gcn.dir/DependInfo.cmake"
+  "CMakeFiles/grafenne.dir/DependInfo.cmake"
   )
